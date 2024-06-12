@@ -1,0 +1,28 @@
+{% extends "base.html" %} {% block title %}User{% endblock %} 
+{% block styles %}
+<meta name="viewport" content="initial-scale=1.0,
+width=device-width" />
+<script src="https://js.api.here.com/v3/3.1/mapsjs-core.js"
+type="text/javascript" charset="utf-8"></script>
+<script src="https://js.api.here.com/v3/3.1/mapsjs-service.js"
+type="text/javascript" charset="utf-8"></script>
+<script src="https://js.api.here.com/v3/3.1/mapsjs-ui.js"
+type="text/javascript" charset="utf-8"></script>
+<link rel="stylesheet" type="text/css"
+href="https://js.api.here.com/v3/3.1/mapsjs-ui.css" />
+<link rel="stylesheet" type="text/css"
+href="{{ url_for('static', filename='style.css')}}" />
+<!-- <script src="./script.js" type="text/javascript"></script> -->
+{% endblock %}
+
+{% block content %}
+<div id="map"></div>
+<script src="https://js.api.here.com/v3/3.1/mapsjs-core.js"></script>
+<script src="https://js.api.here.com/v3/3.1/mapsjs-service.js"></script>
+<script src="https://js.api.here.com/v3/3.1/mapsjs-ui.js"></script>
+<script src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js"></script>
+<script src="{{ url_for('static', filename='live_pos.js')}}" type="text/javascript"></script>
+
+<!--JKASDFKJASHDKJFASDHFAKLJSHDCKAJSDUFBAKSJDFHBASDFASDFASDFASDHKBAKSDFASD-->
+
+{% endblock %}

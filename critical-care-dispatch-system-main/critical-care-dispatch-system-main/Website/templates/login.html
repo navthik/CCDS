@@ -1,0 +1,77 @@
+{% extends "base.html" %} {% block title %}Login{% endblock %} {% block content
+    %}
+    <style>
+      body {
+      background-image: url("{{ url_for('static', filename='Signup-bg.svg') }}");
+      background-size: 100% 100%;
+      background-position: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .form-group {
+    color: rgb(60, 66, 72);
+    margin: 0 auto;
+    max-width: 400px;
+    font-weight: 550;
+  }
+
+  .form-control {
+    color: rgb(54, 56, 58);
+    background: rgba(255, 255, 255, 0.1);
+    margin: 0 auto;
+    max-width: 400px;
+  }
+
+  .sign-text {
+    color: rgb(54, 56, 59);
+    font-weight: bold;
+    font-size: 3rem;
+    font-family: 'Poppins', sans-serif;
+  }
+  .image{
+    height: fit-content;
+  }
+  /* Adjust styles for smaller screens */
+  @media (max-width: 576px) {
+    .form-group {
+      max-width: 100%;
+    }
+
+    .form-control {
+      max-width: 100%;
+    }
+
+    .sign-text {
+      font-size: 2rem;
+    }
+  }
+    </style>
+    <body class="image">
+    <form method="POST" style="padding-top: 10vh;">
+      <h1 align="center">Login</h1>
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          class="form-control"
+          placeholder="Enter Username"
+        />
+        <label for="mobilenumber">Mobile Number</label>
+        <input
+          type="text"
+          id="mobilenumber"
+          name="mobilenumber"
+          class="form-control"
+          placeholder="Enter Mobile Number"
+        />
+        <br />
+        <div align="center">
+          <button class="btn btn-primary" type="submit">Login</button>
+        </div>
+      </div>
+    </form>
+    <p align="center">Haven't Signed Up yet? Click to <a href="/sign-up" style="text-decoration: none;">Sign-up</a></p>
+  </body>
+    {% endblock %}

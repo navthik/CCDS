@@ -1,0 +1,135 @@
+{% extends "base.html" %} {% block title %}Sign Up{% endblock %}
+{% block content %}
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+  /* Set background image and size */
+  body {
+    background-image: url("{{ url_for('static', filename='Signup-bg.svg') }}");
+      background-size: 100% 100%;
+      background-position: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+  }
+  .body::-webkit-scrollbar {
+  display: none;
+}
+
+  /* Adjust font size and color */
+  .form-group {
+    color: rgb(60, 66, 72);
+    margin: 0 auto;
+    max-width: 400px;
+    font-weight: 550;
+  }
+
+  .form-control {
+    color: rgb(54, 56, 58);
+    background: rgba(255, 255, 255, 0.1);
+    margin: 0 auto;
+    max-width: 400px;
+  }
+
+  .sign-text {
+    color: rgb(54, 56, 59);
+    font-weight: bold;
+    font-size: 3rem;
+    font-family: 'Poppins', sans-serif;
+  }
+  .image{
+    height: fit-content;
+  }
+  /* Adjust styles for smaller screens */
+  @media (max-width: 576px) {
+    .form-group {
+      max-width: 100%;
+    }
+
+    .form-control {
+      max-width: 100%;
+    }
+
+    .sign-text {
+      font-size: 2rem;
+    }
+
+    /* Adjust background size for smaller screens */
+    body {
+      background-size: 100% 100%;
+      background-position: 100%;
+      background-image: url('Signup-bg.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+</style>
+<body class="image">
+  
+<form method="POST" style="padding-top: 10vh;">
+  <h1 align="center" class="sign-text">Sign Up</h1>
+  <div class="form-group">
+    <label for="username">Username</label>
+    <input
+      type="text"
+      id="username"
+      name="username"
+      class="form-control"
+      placeholder="Enter Username"
+    />
+    <label for="name">Name</label>
+    <input
+      type="text"
+      id="name"
+      name="name"
+      class="form-control"
+      placeholder="Enter Name"
+    />
+    <label for="mobilenumber">Mobile Number</label>
+    <input
+      type="text"
+      id="mobilenumber"
+      name="mobilenumber"
+      class="form-control"
+      placeholder="Enter Mobile Number"
+    />
+    <label for="driverid">Driver ID</label>
+    <input
+      type="text"
+      id="driverid"
+      name="driverid"
+      class="form-control"
+      placeholder="Enter Driver ID"
+    />
+    <label for="ambulanceno">Ambulance Number</label>
+    <input
+      type="text"
+      id="ambulanceno"
+      name="ambulanceno"
+      class="form-control"
+      placeholder="Enter Ambulance Number"
+    />
+    <label for="hospitalname">Hospital Name</label>
+    <input
+      type="text"
+      id="hospitalname"
+      name="hospitalname"
+      class="form-control"
+      placeholder="Enter Hospital Name"
+    />
+    <label for="aadharno">Aadhar Number</label>
+    <input
+      type="text"
+      id="aadharno"
+      name="aadharno"
+      class="form-control"
+      placeholder="Enter Aadhar Number"
+    />
+    <br />
+    <div align="center">
+      <button class="btn btn-primary" type="submit">Sign Up</button>
+    </div>
+  </div>
+</form>
+
+</body>
+{% endblock %}
